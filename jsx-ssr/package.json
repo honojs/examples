@@ -1,0 +1,20 @@
+{
+  "name": "jsx-ssr",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild --bundle --sourcemap --outdir=dist ./src/index.tsx",
+    "dev": "miniflare --live-reload --debug",
+    "deploy": "wrangler publish dist/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "hono": "^1.0.0",
+    "nano-jsx": "^0.0.30"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.38",
+    "miniflare": "^2.4.0",
+    "wrangler": "^0.0.27"
+  }
+}

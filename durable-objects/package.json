@@ -1,0 +1,17 @@
+{
+  "name": "durable-objects",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler publish src/index.ts"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.7.1",
+    "wrangler": "^0.0.27"
+  },
+  "dependencies": {
+    "hono": "^1.0.0"
+  }
+}

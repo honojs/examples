@@ -1,0 +1,5 @@
+name = "hono-example-jsx-ssr"
+compatibility_date = "2022-04-27"
+
+[build]
+command = "yarn run build"

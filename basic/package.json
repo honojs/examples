@@ -1,0 +1,17 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev index.js",
+    "deploy": "wrangler publish index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "hono": "^1.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^0.0.27"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild --bundle --outdir=dist ./src/index.ts",
+    "dev": "miniflare --live-reload --debug",
+    "deploy": "wrangler publish dist/index.js",
+    "test": "jest --verbose"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "hono": "^1.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.7.1",
+    "esbuild": "^0.14.38",
+    "esbuild-jest": "^0.5.0",
+    "jest": "^28.0.1",
+    "jest-environment-miniflare": "^2.4.0",
+    "miniflare": "^2.4.0",
+    "wrangler": "^0.0.27"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "hono-examples",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "basic",
+    "blog",
+    "durable-objects",
+    "jsx-ssr",
+    "mustache-template",
+    "serve-static"
+  ],
+  "license": "MIT"
+}
