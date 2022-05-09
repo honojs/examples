@@ -12,6 +12,6 @@
     "mustache": "^4.2.0"
   },
   "devDependencies": {
-    "wrangler": "^0.0.30"
+    "wrangler": "^2.0.0"
   }
 }
