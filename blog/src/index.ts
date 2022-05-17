@@ -1,21 +1,25 @@
 import { Hono } from 'hono'
+import { basicAuth } from 'hono/basic-auth'
+import { prettyJSON } from 'hono/pretty-json'
+import { api } from './api'
+import { Bindings } from './bindings'
 
-import { bodyParse } from 'hono/body-parse'
-import { cors } from 'hono/cors'
+const app = new Hono()
+app.get('/', (c) => c.text('Pretty Blog API'))
+app.notFound((c) => c.json({ message: 'Not Found', ok: false }, 404))
 
-import * as Controller from './controller'
+const middleware = new Hono<Bindings>()
+middleware.use('*', prettyJSON())
+middleware.use('/posts/*', async (c, next) => {
+  if (c.req.method !== 'GET') {
+    const auth = basicAuth({ username: c.env.USERNAME, password: c.env.PASSWORD })
+    await auth(c, next)
+  } else {
+    await next()
+  }
+})
 
-export const app = new Hono()
+app.route('/api', middleware)
+app.route('/api', api)
 
-app.use('/posts/*', bodyParse())
-app.use('/posts/*', cors())
-
-app.get('/', Controller.root)
-
-app.get('/posts', Controller.list)
-app.post('/posts', Controller.create)
-app.get('/posts/:id', Controller.show)
-app.put('/posts/:id', Controller.update)
-app.delete('/posts/:id', Controller.destroy)
-
-app.fire()
+export default app

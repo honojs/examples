@@ -1,4 +1,3 @@
-declare const BLOG_EXAMPLE: KVNamespace
 const PREFIX = 'v1:post:'
 
 declare global {
@@ -22,50 +21,51 @@ const generateID = (key: string) => {
   return `${PREFIX}${key}`
 }
 
-export const getPosts = async (): Promise<Post[]> => {
-  const list = await BLOG_EXAMPLE.list({ prefix: PREFIX })
+export const getPosts = async (KV: KVNamespace): Promise<Post[]> => {
+  const list = await KV.list({ prefix: PREFIX })
   const keys = list.keys
-
   const posts: Post[] = []
 
-  for (const key of keys) {
-    const value = await BLOG_EXAMPLE.get(key.name)
-    if (!value) continue
-    const post: Post = JSON.parse(value)
-    posts.push(post)
+  const len = keys.length
+  for (let i = 0; i < len; i++) {
+    const value = await KV.get(keys[i].name)
+    if (value) {
+      const post: Post = JSON.parse(value)
+      posts.push(post)
+    }
   }
 
   return posts
 }
 
-export const getPost = async (id: string): Promise<Post | undefined> => {
-  const value = await BLOG_EXAMPLE.get(generateID(id))
+export const getPost = async (KV: KVNamespace, id: string): Promise<Post | undefined> => {
+  const value = await KV.get(generateID(id))
   if (!value) return
   const post: Post = JSON.parse(value)
   return post
 }
 
-export const createPost = async (param: Param): Promise<Post | undefined> => {
-  if (!(param.title && param.body)) return
+export const createPost = async (KV: KVNamespace, param: Param): Promise<Post | undefined> => {
+  if (!(param && param.title && param.body)) return
   const id = crypto.randomUUID()
   const newPost: Post = { id: id, title: param.title, body: param.body }
-  await BLOG_EXAMPLE.put(generateID(id), JSON.stringify(newPost))
+  await KV.put(generateID(id), JSON.stringify(newPost))
   return newPost
 }
 
-export const updatePost = async (id: string, param: Param): Promise<boolean> => {
-  if (!(param.title && param.body)) return false
-  const post = await getPost(id)
+export const updatePost = async (KV: KVNamespace, id: string, param: Param): Promise<boolean> => {
+  if (!(param && param.title && param.body)) return false
+  const post = await getPost(KV, id)
   if (!post) return false
   post.title = param.title
   post.body = param.body
-  await BLOG_EXAMPLE.put(generateID(id), JSON.stringify(post))
+  await KV.put(generateID(id), JSON.stringify(post))
   return true
 }
 
-export const deletePost = async (id: string): Promise<boolean> => {
-  const post = await getPost(id)
+export const deletePost = async (KV: KVNamespace, id: string): Promise<boolean> => {
+  const post = await getPost(KV, id)
   if (!post) return false
-  await BLOG_EXAMPLE.delete(generateID(id))
+  await KV.delete(generateID(id))
   return true
 }
