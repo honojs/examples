@@ -4,6 +4,7 @@ import { bodyParse } from 'hono/body-parse'
 import { etag } from 'hono/etag'
 import { logger } from 'hono/logger'
 import { poweredBy } from 'hono/powered-by'
+import { prettyJSON } from 'hono/pretty-json'
 
 const app = new Hono()
 
@@ -58,13 +59,14 @@ app.get('/entry/:id', (c) => {
 })
 
 // Nested route
-const book = app.route('/book')
+const book = new Hono()
 book.get('/', (c) => c.text('List Books'))
 book.get('/:id', (c) => {
   const id = c.req.param('id')
   return c.text('Get Book: ' + id)
 })
 book.post('/', (c) => c.text('Create Book'))
+app.route('/book', book)
 
 // Redirect
 app.get('/redirect', (c) => c.redirect('/'))
@@ -86,7 +88,7 @@ app.get('/user-agent', (c) => {
 })
 
 // JSON
-app.get('/api/posts', (c) => {
+app.get('/api/posts', prettyJSON(), (c) => {
   const posts = [
     { id: 1, title: 'Good Morning' },
     { id: 2, title: 'Good Aternoon' },
