@@ -1,14 +1,11 @@
 import { Hono } from 'hono'
-
 export { Counter } from './counter'
 
-declare module 'hono' {
-  interface Env {
-    COUNTER: DurableObjectNamespace
-  }
+interface Env {
+  COUNTER: DurableObjectNamespace
 }
 
-const app = new Hono()
+const app = new Hono<Env>()
 
 app.get('*', async (c) => {
   const id = c.env.COUNTER.idFromName('A')
