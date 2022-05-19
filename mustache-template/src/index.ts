@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { mustache } from 'hono/mustache'
+// import { mustache } from 'hono/mustache.module' <--- Module Worker mode
 
 const app = new Hono()
 
@@ -14,3 +15,4 @@ app.get('/', (c) => {
 })
 
 app.fire()
+// export default app <--- Module Worker mode
