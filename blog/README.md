@@ -7,9 +7,7 @@ CRUD web API for Blog.
 - Cloudflare Workers
 - KV
 - TypeScript
-- `esbuild` for build
-- `miniflare` for development
-- `wrangler@beta` for deploy
+- `wrangler` for develop and deploy
 - Test with Jest `miniflare environment`
 
 ## Endpoints
