@@ -1,5 +1,7 @@
 name = "hono-example-mustache"
 compatibility_date = "2022-02-12"
 
+main = "src/index.ts"
+
 [site]
 bucket = "./view"
