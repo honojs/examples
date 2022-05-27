@@ -9,7 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "hono": "^1.3.4",
-    "nano-jsx": "^0.0.30"
+    "nano-jsx": "^0.0.31"
   },
   "devDependencies": {
     "wrangler": "^2.0.5"
