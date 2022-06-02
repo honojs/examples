@@ -6,11 +6,12 @@ import { logger } from 'hono/logger'
 import { poweredBy } from 'hono/powered-by'
 import { prettyJSON } from 'hono/pretty-json'
 
-const app = new Hono()
+// `export` for testing
+export const app = new Hono()
 
 // Mount Builtin Middleware
 app.use('*', poweredBy())
-app.use('*', logger())
+// app.use('*', logger())
 app.use('/form', bodyParse())
 app.use(
   '/auth/*',
