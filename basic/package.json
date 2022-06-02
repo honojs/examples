@@ -1,11 +1,11 @@
 {
   "name": "basic",
   "version": "0.0.1",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "private": true,
   "scripts": {
-    "dev": "wrangler dev index.ts",
-    "deploy": "wrangler publish index.ts",
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler publish src/index.ts",
     "test": "jest"
   },
   "license": "MIT",
