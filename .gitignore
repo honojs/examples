@@ -3,3 +3,6 @@ node_modules
 worker
 package-lock.json
 yarn.lock
+
+# Output of 'npm pack'
+*.tgz
