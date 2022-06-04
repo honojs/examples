@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "hono": "^1.4.3",
+    "hono": "^1.4.4",
     "mustache": "^4.2.0"
   },
   "devDependencies": {
