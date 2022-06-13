@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "jsxFactory": "Nano.h",
+    "jsxFactory": "jsx",
+    "jsxFragmentFactory": "Fragment"
   }
 }

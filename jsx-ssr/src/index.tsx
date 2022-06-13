@@ -1,8 +1,7 @@
 import { Hono } from 'hono'
-import Nano from 'nano-jsx'
-import { Page } from './pages/page'
-import { Top } from './pages/top'
-import { render } from './renderer'
+import { jsx } from 'hono/jsx'
+import { Page } from './pages/Page'
+import { Top } from './pages/Top'
 
 const app = new Hono()
 
@@ -31,16 +30,14 @@ const getPost = (id: string) => {
 // Controller
 app.get('/', (c) => {
   const posts = getPosts()
-  const html = render(<Top posts={posts} />)
-  return c.html(html)
+  return c.html(<Top posts={posts} />)
 })
 
 app.get('/post/:id{[0-9]+}', (c) => {
   const id = c.req.param('id')
   const post = getPost(id)
   if (!post) return c.notFound()
-  const html = render(<Page post={post} />)
-  return c.html(html)
+  return c.html(<Page post={post} />)
 })
 
 app.fire()

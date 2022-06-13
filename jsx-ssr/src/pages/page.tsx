@@ -1,25 +1,15 @@
-import Nano from 'nano-jsx'
-import { Helmet } from 'nano-jsx'
-import { Header } from '../components/header'
-import { Footer } from '../components/footer'
+import { jsx } from 'hono/jsx'
+import { Layout } from '../components/Layout'
 import type { Post } from '../index'
 
-type Props = {
-  post: Post
-}
-
-export const Page = (props: Props) => {
+export const Page = (props: { post: Post }) => {
   return (
-    <div>
-      <Helmet>
-        <title>{props.post.title}</title>
-      </Helmet>
-      <Header />
+    <Layout title={props.post.title}>
+      <title>{props.post.title}</title>
       <main>
         <h2>{props.post.title}</h2>
         <p>{props.post.body}</p>
       </main>
-      <Footer />
-    </div>
+    </Layout>
   )
 }

@@ -1,34 +1,24 @@
-import Nano from 'nano-jsx'
-import { Helmet } from 'nano-jsx'
-import { Header } from '../components/header'
-import { Footer } from '../components/footer'
+import { jsx } from 'hono/jsx'
+import { Layout } from '../components/Layout'
 import type { Post } from '../index'
 
-type Props = {
-  posts: Post[]
-}
+const List = (props: { post: Post }) => (
+  <li>
+    <a href={`/post/${props.post.id}`}>{props.post.title}</a>
+  </li>
+)
 
-export const Top = (props: Props) => {
+export const Top = (props: { posts: Post[] }) => {
   return (
-    <div>
-      <Helmet>
-        <title>Top</title>
-      </Helmet>
-      <Header />
+    <Layout title={'Top'}>
       <main>
         <h2>Posts</h2>
-        {props.posts}
         <ul>
-          {props.posts.map((post) => {
-            return (
-              <li>
-                <a href={`/post/${post.id}`}>{post.title}</a>
-              </li>
-            )
-          })}
+          {props.posts.map((post) => (
+            <List post={post} />
+          ))}
         </ul>
       </main>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
