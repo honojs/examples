@@ -11,7 +11,6 @@ export const Layout = (props: { title: string; children?: any }) => {
           rel="stylesheet"
           href="//cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
         />
-        <link rel="stylesheet" href="https://cdn.skypack.dev/@hotwired/turbo" />
       </head>
       <body style="padding: 1em 2em">
         <header>
