@@ -9,7 +9,8 @@
     "durable-objects",
     "jsx-ssr",
     "mustache-template",
-    "serve-static"
+    "serve-static",
+    "pages"
   ],
   "license": "MIT"
 }
