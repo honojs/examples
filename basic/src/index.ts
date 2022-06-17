@@ -2,12 +2,10 @@ import { Hono } from 'hono'
 import { basicAuth } from 'hono/basic-auth'
 import { bodyParse } from 'hono/body-parse'
 import { etag } from 'hono/etag'
-import { logger } from 'hono/logger'
 import { poweredBy } from 'hono/powered-by'
 import { prettyJSON } from 'hono/pretty-json'
 
-// `export` for testing
-export const app = new Hono()
+const app = new Hono()
 
 // Mount Builtin Middleware
 app.use('*', poweredBy())
@@ -114,10 +112,8 @@ app.get('/error', () => {
 })
 app.get('/type-error', () => 'return not Response instance')
 
-// addEventListener
-app.fire()
-
-/*
-Or use Cloudflare Module Worker syntax.
+// Cloudflare Module Worker syntax.
 export default app
-*/
+
+// Or Service Worker mode:
+// app.fire()
