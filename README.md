@@ -16,6 +16,7 @@ yarn install
 * [jsx-ssr](./jsx-ssr/) - JSX Sever Side Rendering using `nano-jsx`
 * [mustache-template](./mustache-template/) - HTML rendering with `mustache` middleware
 * [serve-static](./serve-static/) - example of `serve-static` middleware
+* [pages](./pages/) - using Hono for [Cloudflare Pages Functions](https://developers.cloudflare.com/pages/platform/functions/)
 
 ## Boilerplates
 
