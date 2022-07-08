@@ -7,7 +7,7 @@ import {
   serveStatic,
   jsx,
   html,
-} from 'https://deno.land/x/hono@v1.6.2/mod.ts'
+} from 'https://deno.land/x/hono@v1.6.3/mod.ts'
 
 const app = new Hono()
 
@@ -37,4 +37,4 @@ app.get('/', (c) => {
   )
 })
 
-serve((req) => app.fetch(req))
+serve(app.fetch)
