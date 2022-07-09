@@ -6,3 +6,11 @@ yarn.lock
 
 # Output of 'npm pack'
 *.tgz
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

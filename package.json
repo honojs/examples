@@ -12,5 +12,6 @@
     "serve-static",
     "pages"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@3.2.1"
 }
