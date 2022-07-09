@@ -1,0 +1,7 @@
+{
+  "name": "bun",
+  "license": "MIT",
+  "dependencies": {
+    "hono": "^1.6.3"
+  }
+}

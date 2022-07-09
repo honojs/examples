@@ -12,6 +12,7 @@ This repository is containing examples using [Hono](https://github.com/honojs/ho
 * [serve-static](./serve-static/) - example of `serve-static` middleware
 * [pages](./pages/) - using Hono for [Cloudflare Pages Functions](https://developers.cloudflare.com/pages/platform/functions/)
 * [deno](./deno/) - examples for Deno
+* [bun](./bun/) - examples for Bun
 
 ## How to run
 
