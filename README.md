@@ -8,7 +8,6 @@ This repository is containing examples using [Hono](https://github.com/honojs/ho
 * [blog](./blog/) - CRUD example
 * [durable-objects](./durable-objects/) - simple example with Cloudflare Durable Objects
 * [jsx-ssr](./jsx-ssr/) - JSX Sever Side Rendering with `jsx` middleware
-* [mustache-template](./mustache-template/) - HTML rendering with `mustache` middleware
 * [serve-static](./serve-static/) - example of `serve-static` middleware
 * [pages](./pages/) - using Hono for [Cloudflare Pages Functions](https://developers.cloudflare.com/pages/platform/functions/)
 * [deno](./deno/) - examples for Deno
