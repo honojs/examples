@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "hono": "^1.6.3"
+    "hono": "^2.0.2"
   },
   "devDependencies": {
     "@types/jest": "^28.1.4",
@@ -19,6 +19,6 @@
     "jest": "^28.1.2",
     "jest-environment-miniflare": "^2.6.0",
     "types-cloudflare-worker": "^1.2.0",
-    "wrangler": "^2.0.16"
+    "wrangler": "^2.0.22"
   }
 }

@@ -1,6 +1,5 @@
 import { Hono } from 'hono'
 import { basicAuth } from 'hono/basic-auth'
-import { bodyParse } from 'hono/body-parse'
 import { etag } from 'hono/etag'
 import { poweredBy } from 'hono/powered-by'
 import { prettyJSON } from 'hono/pretty-json'
@@ -10,7 +9,6 @@ const app = new Hono()
 // Mount Builtin Middleware
 app.use('*', poweredBy())
 // app.use('*', logger())
-app.use('/form', bodyParse())
 app.use(
   '/auth/*',
   basicAuth({
