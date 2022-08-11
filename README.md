@@ -42,6 +42,20 @@ or allow to read files on local disk:
 deno run --allow-net --allow-read jsx.tsx
 ```
 
+### Bun
+
+Install:
+
+```
+bun install
+```
+
+Run:
+
+```
+bun run hello.ts
+```
+
 ## Boilerplates
 
 * [hono-minimal](https://github.com/honojs/hono-minimal) - Minimal project with Hono for Cloudflare Workers.
