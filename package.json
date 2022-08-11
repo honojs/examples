@@ -11,7 +11,8 @@
     "mustache-template",
     "serve-static",
     "pages",
-    "bun"
+    "bun",
+    "validator"
   ],
   "license": "MIT",
   "packageManager": "yarn@3.2.1"

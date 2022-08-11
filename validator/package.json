@@ -1,0 +1,17 @@
+{
+  "name": "validator",
+  "version": "0.0.1",
+  "main": "src/index.tsx",
+  "scripts": {
+    "dev": "wrangler dev src/index.tsx",
+    "deploy": "wrangler publish src/index.tsx"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@honojs/validator": "^0.1.0",
+    "hono": "^2.0.8"
+  },
+  "devDependencies": {
+    "wrangler": "^2.0.22"
+  }
+}
