@@ -5,7 +5,7 @@ interface Env {
   COUNTER: DurableObjectNamespace
 }
 
-const app = new Hono<Env>()
+const app = new Hono<{ Bindings: Env }>()
 
 app.get('*', async (c) => {
   const id = c.env.COUNTER.idFromName('A')

@@ -3,7 +3,7 @@ import * as model from './model'
 import { Bindings } from './bindings'
 import { cors } from 'hono/cors'
 
-const api = new Hono<Bindings>()
+const api = new Hono<{ Bindings: Bindings }>()
 api.use('/posts/*', cors())
 
 api.get('/', (c) => {
@@ -16,8 +16,8 @@ api.get('/posts', async (c) => {
 })
 
 api.post('/posts', async (c) => {
-  const param = await c.req.parseBody()
-  const newPost = await model.createPost(c.env.BLOG_EXAMPLE, param)
+  const param = await c.req.json()
+  const newPost = await model.createPost(c.env.BLOG_EXAMPLE, param as model.Param)
   if (!newPost) {
     return c.json({ error: 'Can not create new post', ok: false }, 422)
   }
@@ -40,8 +40,8 @@ api.put('/posts/:id', async (c) => {
     // 204 No Content
     return new Response(null, { status: 204 })
   }
-  const param = await c.req.parseBody()
-  const success = await model.updatePost(c.env.BLOG_EXAMPLE, id, param)
+  const param = await c.req.json()
+  const success = await model.updatePost(c.env.BLOG_EXAMPLE, id, param as model.Param)
   return c.json({ ok: success })
 })
 

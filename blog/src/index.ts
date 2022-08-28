@@ -8,7 +8,7 @@ const app = new Hono()
 app.get('/', (c) => c.text('Pretty Blog API'))
 app.notFound((c) => c.json({ message: 'Not Found', ok: false }, 404))
 
-const middleware = new Hono<Bindings>()
+const middleware = new Hono<{ Bindings: Bindings }>()
 middleware.use('*', prettyJSON())
 middleware.use('/posts/*', async (c, next) => {
   if (c.req.method !== 'GET') {

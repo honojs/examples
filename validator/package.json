@@ -9,7 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "@honojs/validator": "^0.1.0",
-    "hono": "^2.0.8"
+    "hono": "^2.1.2"
   },
   "devDependencies": {
     "wrangler": "^2.0.22"
