@@ -23,7 +23,7 @@ CRUD web API for Blog.
 Install dependencies:
 
 ```sh
-yarn run install
+yarn install
 ```
 
 Rename `wrangler.example.toml` to `wrangler.toml`:
