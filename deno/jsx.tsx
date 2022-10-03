@@ -20,7 +20,7 @@ type Props = {
 }
 
 const Layout = (props: Props) => html`<!DOCTYPE html>
-  <html>
+  <html lang="en">
     <head>
       <title>${props.title}</title>
     </head>

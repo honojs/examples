@@ -5,7 +5,7 @@ const app = new Hono()
 
 const Layout = (props: { children?: string }) => {
   return (
-    <html>
+    <html lang="en">
       <body>{props.children}</body>
     </html>
   )

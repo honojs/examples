@@ -12,7 +12,7 @@ type Post = {
 const posts: Post[] = []
 
 const Layout = (props: any) => html`<!DOCTYPE html>
-  <html>
+  <html lang="en">
     <head>
       <title>Hono Validator Middleware Example</title>
       <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
