@@ -13,7 +13,7 @@
     "hono": "^2.2.5"
   },
   "devDependencies": {
-    "@types/jest": "^28.1.4",
+    "@types/jest": "^29.1.1",
     "esbuild": "^0.15.1",
     "esbuild-jest": "^0.5.0",
     "jest": "^28.1.2",
