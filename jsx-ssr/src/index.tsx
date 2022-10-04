@@ -1,5 +1,4 @@
 import { Hono } from 'hono'
-import { jsx } from 'hono/jsx'
 import { Page } from './pages/Page'
 import { Top } from './pages/Top'
 

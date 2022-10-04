@@ -1,4 +1,3 @@
-import { jsx } from 'hono/jsx'
 import { Layout } from '../components/Layout'
 import type { Post } from '../index'
 
