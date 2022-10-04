@@ -19,6 +19,6 @@
     "jest": "^28.1.2",
     "jest-environment-miniflare": "^2.6.0",
     "types-cloudflare-worker": "^1.2.0",
-    "wrangler": "^2.0.22"
+    "wrangler": "^2.1.10"
   }
 }
