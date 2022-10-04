@@ -11,7 +11,7 @@
     "deploy": "wrangler pages publish pages"
   },
   "dependencies": {
-    "hono": "^2.1.2"
+    "hono": "^2.2.5"
   },
   "devDependencies": {
     "esbuild": "^0.15.1",
