@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { html } from 'hono/html'
 import { jsx } from 'hono/jsx'
-import { validation } from '@honojs/validator'
+import { validator } from 'hono/validator'
 
 const app = new Hono()
 
@@ -53,30 +53,30 @@ app.get('/', (c) => {
 
 app.post(
   '/post',
-  validation((v, message) => ({
-    body: {
-      // Validation rules
-      title: [v.required, [v.isLength, { max: 80 }]],
-      // Custom error message
-      body: [[v.isLength, { max: 400 }, message('Body is wrong!!')]],
-    },
-    // Handling results
-    done: (result, c) => {
-      if (result.hasError) {
-        const page = (
-          <Layout>
-            <h2>Validation Error!!</h2>
-            <ul>
-              {result.messages.map((message) => {
-                return <li>{message}</li>
-              })}
-            </ul>
-          </Layout>
-        )
-        return c.html(page, 400)
-      }
-    },
-  }))
+  validator(
+    (v) => ({
+      title: v.body('title').isRequired().isLength({ max: 80 }),
+      body: v.body('body').isLength({ max: 400 }).message('Body is wrong!!'),
+    }),
+    {
+      // Handling results
+      done: (result, c) => {
+        if (result.hasError) {
+          const page = (
+            <Layout>
+              <h2>Validation Error!!</h2>
+              <ul>
+                {result.messages.map((message) => {
+                  return <li>{message}</li>
+                })}
+              </ul>
+            </Layout>
+          )
+          return c.html(page, 400)
+        }
+      },
+    }
+  )
 )
 
 app.post('/post', async (c) => {

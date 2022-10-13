@@ -12,7 +12,7 @@ This repository is containing examples using [Hono](https://github.com/honojs/ho
 * [pages](./pages/) - using Hono for [Cloudflare Pages Functions](https://developers.cloudflare.com/pages/platform/functions/)
 * [deno](./deno/) - examples for Deno
 * [bun](./bun/) - examples for Bun
-* [validator](./validator/) - example of [`Validator` Middleware](https://github.com/honojs/validator)
+* [validator](./validator/) - `Validator` Middleware
 
 ## How to run
 
