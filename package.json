@@ -15,5 +15,8 @@
     "validator"
   ],
   "license": "MIT",
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "dependencies": {
+    "hono": "^2.3.0"
+  }
 }
