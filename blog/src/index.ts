@@ -13,7 +13,7 @@ middleware.use('*', prettyJSON())
 middleware.use('/posts/*', async (c, next) => {
   if (c.req.method !== 'GET') {
     const auth = basicAuth({ username: c.env.USERNAME, password: c.env.PASSWORD })
-    await auth(c, next)
+    return auth(c, next)
   } else {
     await next()
   }
