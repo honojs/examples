@@ -10,7 +10,8 @@
     "jsx-ssr",
     "mustache-template",
     "serve-static",
-    "bun"
+    "bun",
+    "pages-stack"
   ],
   "license": "MIT",
   "packageManager": "yarn@3.2.1",
