@@ -8,9 +8,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "hono": "^2.3.0"
+    "hono": "3.0.0-rc.16"
   },
   "devDependencies": {
-    "wrangler": "^2.1.10"
+    "wrangler": "^2.10.0"
   }
 }

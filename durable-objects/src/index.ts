@@ -1,11 +1,11 @@
 import { Hono } from 'hono'
 export { Counter } from './counter'
 
-interface Env {
+type Bindings = {
   COUNTER: DurableObjectNamespace
 }
 
-const app = new Hono<{ Bindings: Env }>()
+const app = new Hono<{ Bindings: Bindings }>()
 
 app.get('*', async (c) => {
   const id = c.env.COUNTER.idFromName('A')

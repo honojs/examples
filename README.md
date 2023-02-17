@@ -1,16 +1,17 @@
 # Hono Examples
 
-This repository is containing examples using [Hono](https://github.com/honojs/hono).
+This repository is containing examples using [Hono](https://hono.dev).
 
 ## Included Examples
 
-* [basic](./basic/) - basic usage of a routing, middleware, and `Context`
+* [basic](./basic/) - basic usage of routing, middleware, and `Context`
 * [blog](./blog/) - CRUD example
 * [durable-objects](./durable-objects/) - simple example with Cloudflare Durable Objects
 * [jsx-ssr](./jsx-ssr/) - JSX Server Side Rendering with `JSX` Middleware
 * [serve-static](./serve-static/) - example of `Serve Static` Middleware
 * [deno](./deno/) - examples for Deno
 * [bun](./bun/) - examples for Bun
+* [pages-stack](./pages-stack/) - Zod + Zod Validator + `hc` + React on Cloudflare Pages
 
 ## How to run
 

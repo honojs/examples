@@ -1,4 +1,4 @@
-export interface Bindings {
+export type Bindings = {
   USERNAME: string
   PASSWORD: string
   BLOG_EXAMPLE: KVNamespace

@@ -99,19 +99,12 @@ app.post('/api/posts', (c) => c.json({ message: 'Created!' }, 201))
 // default route
 app.get('/api/*', (c) => c.text('API endpoint is not found', 404))
 
-app.post('/form', async (c) => {
-  return c.json(c.req.parsedBody || {})
-  //return new Response('ok /form')
-})
-
 // Throw Error
 app.get('/error', () => {
   throw Error('Error has occurred')
 })
+
+// @ts-ignore
 app.get('/type-error', () => 'return not Response instance')
 
-// Cloudflare Module Worker syntax.
 export default app
-
-// Or Service Worker mode:
-// app.fire()
