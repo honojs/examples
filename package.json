@@ -11,7 +11,8 @@
     "mustache-template",
     "serve-static",
     "bun",
-    "pages-stack"
+    "pages-stack",
+    "nextjs-stack"
   ],
   "license": "MIT",
   "packageManager": "yarn@3.2.1",
