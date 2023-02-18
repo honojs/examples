@@ -5,7 +5,7 @@ import { AppType } from './api/[...route]'
 
 const client = hc<AppType>('/api')
 
-const postTodo = async (_: string, { arg }: { arg: string }) => {
+const postHello = async (_: string, { arg }: { arg: string }) => {
   const res = await client.hello.$post({
     form: {
       name: arg,
@@ -15,7 +15,7 @@ const postTodo = async (_: string, { arg }: { arg: string }) => {
 }
 
 export default function Home() {
-  const { trigger, isMutating, data } = useSWRMutation('todos', postTodo)
+  const { trigger, isMutating, data } = useSWRMutation('post-hello', postHello)
   const [name, setName] = useState('')
 
   return (
