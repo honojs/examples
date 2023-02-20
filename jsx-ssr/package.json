@@ -12,7 +12,7 @@
     "hono": "^3.0.0"
   },
   "devDependencies": {
-    "esbuild": "^0.15.1",
+    "esbuild": "^0.17.9",
     "miniflare": "^2.9.0",
     "wrangler": "^2.10.0"
   }
