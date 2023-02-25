@@ -17,6 +17,6 @@
   "license": "MIT",
   "packageManager": "yarn@3.2.1",
   "dependencies": {
-    "hono": "^3.0.0"
+    "hono": "^3.0.2"
   }
 }
