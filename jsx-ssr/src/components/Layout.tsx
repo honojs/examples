@@ -1,15 +1,15 @@
 import { html } from 'hono/html'
 
 export const Layout = (props: { title: string; children?: any }) => {
-  return html` <!DOCTYPE html>
+  return html`<!DOCTYPE html>
     <html>
       <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${props.title}</title>
         <link
           rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
         />
       </head>
       <body style="padding: 1em 2em">
@@ -18,9 +18,9 @@ export const Layout = (props: { title: string; children?: any }) => {
             <a href="/">Hono Example</a>
           </h1>
         </header>
-        <turbo-frame id="main"> ${props.children} </turbo-frame>
+        ${props.children}
         <footer>
-          <address>Built with <a href="https://github.com/honojs/hono">Hono</a></address>
+          <p>Built with <a href="https://github.com/honojs/hono">Hono</a></p>
         </footer>
       </body>
     </html>`
