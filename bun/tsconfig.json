@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "preserve",
+    "jsxFactory": "jsx",
     "jsxFragmentFactory": "Fragment",
     "jsxImportSource": "hono/jsx"
   }
