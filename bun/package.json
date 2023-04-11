@@ -2,7 +2,7 @@
   "name": "bun",
   "license": "MIT",
   "dependencies": {
-    "hono": "^3.0.2"
+    "hono": "^3.1.5"
   },
   "devDependencies": {
     "bun-types": "^0.5.6"
