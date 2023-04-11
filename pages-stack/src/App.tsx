@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 import { AppType } from '../functions/api/[[route]]'
 
 const App = () => {
-  const client = hc<AppType>('/api')
-  const $get = client.hello.$get
+  const client = hc<AppType>('/')
+  const $get = client.api.hello.$get
 
   const [data, setData] = useState<InferResponseType<typeof $get>>()
 

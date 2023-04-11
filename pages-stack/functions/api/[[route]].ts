@@ -3,7 +3,7 @@ import { Hono } from 'hono'
 import { handle } from 'hono/cloudflare-pages'
 import { z } from 'zod'
 
-const app = new Hono()
+const app = new Hono().basePath('/api')
 
 const route = app.get(
   '/hello',
@@ -23,4 +23,4 @@ const route = app.get(
 
 export type AppType = typeof route
 
-export const onRequest = handle(app, '/api')
+export const onRequest = handle(app)
