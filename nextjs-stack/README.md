@@ -11,7 +11,7 @@
 
 ```
 yarn
-yarn run dev
+yarn dev
 ```
 
 ## Author
