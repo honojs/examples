@@ -6,6 +6,3 @@ compatibility_date = "2022-02-03"
 kv_namespaces = [
   { binding = "BLOG_EXAMPLE", preview_id = "", id = "" }
 ]
-
-[build]
-command = "yarn run build"
