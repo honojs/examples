@@ -3,17 +3,14 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "build": "esbuild --bundle --outdir=dist ./src/index.tsx",
-    "dev": "miniflare --live-reload",
+    "dev": "wrangler dev src/index.tsx --live-reload",
     "deploy": "wrangler publish src/index.tsx"
   },
   "license": "MIT",
   "dependencies": {
-    "hono": "^3.3.4"
+    "hono": "^3.7.1"
   },
   "devDependencies": {
-    "esbuild": "^0.15.1",
-    "miniflare": "^2.9.0",
-    "wrangler": "^2.15.0"
+    "wrangler": "^3.9.0"
   }
 }
