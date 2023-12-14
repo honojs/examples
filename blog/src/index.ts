@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { basicAuth } from 'hono/basic-auth'
 import { prettyJSON } from 'hono/pretty-json'
-import { api } from './api'
+import api from './api'
 import { Bindings } from './bindings'
 
 const app = new Hono()

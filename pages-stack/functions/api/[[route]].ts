@@ -10,13 +10,13 @@ const route = app.get(
   zValidator(
     'query',
     z.object({
-      name: z.string(),
+      name: z.string()
     })
   ),
   (c) => {
     const { name } = c.req.valid('query')
-    return c.jsonT({
-      message: `Hello ${name}!`,
+    return c.json({
+      message: `Hello ${name}!`
     })
   }
 )

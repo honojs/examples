@@ -1,16 +1,15 @@
 {
   "name": "jsx-ssr",
   "version": "0.0.1",
-  "main": "dist/index.js",
   "scripts": {
-    "dev": "wrangler dev src/index.tsx --live-reload",
-    "deploy": "wrangler publish src/index.tsx"
+    "dev": "wrangler dev --live-reload src/index.tsx",
+    "deploy": "wrangler deploy src/index.tsx"
   },
   "license": "MIT",
   "dependencies": {
-    "hono": "^3.7.1"
+    "hono": "^3.11.7"
   },
   "devDependencies": {
-    "wrangler": "^3.9.0"
+    "wrangler": "3.17.1"
   }
 }

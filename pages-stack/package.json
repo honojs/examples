@@ -3,24 +3,23 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "wrangler pages dev --local --compatibility-date=2023-02-05 -- yarn vite",
+    "dev": "wrangler pages dev --compatibility-date=2023-02-05 -- yarn vite",
     "build": "vite build",
-    "deploy": "yarn build && wrangler pages publish pages"
+    "deploy": "yarn build && wrangler pages deploy pages"
   },
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "prettier": "^2.8.4",
-    "vite": "^4.1.1",
-    "wrangler": "^2.10.0"
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8",
+    "wrangler": "3.17.1"
   },
   "dependencies": {
-    "@hono/zod-validator": "^0.1.2",
-    "hono": "^3.3.4",
+    "@hono/zod-validator": "^0.1.11",
+    "hono": "^3.11.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "zod": "3.19.1"
+    "zod": "^3.22.4"
   }
 }

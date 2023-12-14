@@ -4,13 +4,13 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler publish src/index.ts"
+    "deploy": "wrangler deploy src/index.ts"
   },
   "license": "MIT",
   "dependencies": {
-    "hono": "^3.3.4"
+    "hono": "^3.11.7"
   },
   "devDependencies": {
-    "wrangler": "^2.15.0"
+    "wrangler": "3.17.1"
   }
 }

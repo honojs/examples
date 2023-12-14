@@ -9,11 +9,10 @@
       "esnext"
     ],
     "types": [
-      "jest",
+      "vitest/globals",
       "@cloudflare/workers-types"
     ],
     "jsx": "react-jsx",
-    "jsxFragmentFactory": "Fragment",
     "jsxImportSource": "hono/jsx"
   }
 }

@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
-import * as model from './model'
-import { Bindings } from './bindings'
 import { cors } from 'hono/cors'
+import { Bindings } from './bindings'
+import * as model from './model'
 
 const api = new Hono<{ Bindings: Bindings }>()
 api.use('/posts/*', cors())
@@ -56,4 +56,4 @@ api.delete('/posts/:id', async (c) => {
   return c.json({ ok: success })
 })
 
-export { api }
+export default api

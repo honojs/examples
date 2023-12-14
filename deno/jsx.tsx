@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Hono } from 'https://deno.land/x/hono@v3.3.0/mod.ts'
-import { logger, poweredBy, serveStatic, jsx, html } from 'https://deno.land/x/hono@v3.3.0/middleware.ts'
+import { html, jsx, logger, poweredBy, serveStatic } from 'https://deno.land/x/hono@v3.11.7/middleware.ts'
+import { Hono } from 'https://deno.land/x/hono@v3.11.7/mod.ts'
 
 const app = new Hono()
 
