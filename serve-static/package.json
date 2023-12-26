@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "hono": "^3.11.7"
+    "hono": "^3.11.11"
   },
   "devDependencies": {
     "wrangler": "3.17.1"
