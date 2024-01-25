@@ -10,7 +10,7 @@ To run the function locally, use the following command:
 supabase functions serve --no-verify-jwt
 ```
 
-Make a POST request using cURL or Postman to `http://127.0.0.1:54321/functions/v1/hono-server/hello-world`:
+Make a GET request using cURL or Postman to `http://127.0.0.1:54321/functions/v1/hono-server/hello-world`:
 
 ```bash
 curl --location 'http://127.0.0.1:54321/functions/v1/hono-server/hello-world'
