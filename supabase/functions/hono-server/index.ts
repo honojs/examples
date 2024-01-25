@@ -1,14 +1,10 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { Context, Hono } from "https://deno.land/x/hono@v3.0.1/mod.ts";
+import type { Context } from "https://deno.land/x/hono@v3.12.7/mod.ts";
+import { Hono } from "https://deno.land/x/hono@v3.12.7/mod.ts";
 
-const app = new Hono();
-
-app.get(
-  "/hello-world",
-  (c: Context) => c.text("Hello World from hono-server!"),
-);
-
-// This is your supabase function name, change accordingly
+// change this to your function name
 const functionName = "hono-server";
-const mainRouter = new Hono().route(`/${functionName}`, app).fetch;
-serve(mainRouter);
+const app = new Hono().basePath(`/${functionName}`);
+
+app.get("/hello-world", (c: Context) => c.text("Hello World from hono-server!"));
+
+Deno.serve(app.fetch);
