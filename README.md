@@ -1,6 +1,6 @@
 # Hono Examples
 
-This repository is containing examples using [Hono](https://hono.dev).
+This repository contains examples that use [Hono](https://hono.dev).
 
 ## Included Examples
 
