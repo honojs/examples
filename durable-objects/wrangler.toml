@@ -1,5 +1,5 @@
 name = "durable-objects-counter"
-compatibility_date = "2022-02-12"
+compatibility_date = "2024-04-01"
 
 [durable_objects]
 bindings = [{name = "COUNTER", class_name = "Counter"}]

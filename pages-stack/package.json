@@ -13,11 +13,11 @@
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.0.8",
-    "wrangler": "3.17.1"
+    "wrangler": "^3.50.0"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.1.11",
-    "hono": "^3.11.11",
+    "hono": "^4.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zod": "^3.22.4"
