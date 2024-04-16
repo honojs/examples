@@ -1,28 +1,11 @@
-import type { UnstableDevWorker } from 'wrangler'
-import { unstable_dev } from 'wrangler'
+import { env } from 'cloudflare:test'
+import { describe, expect, test } from 'vitest'
+import worker from '../src/api'
 import type { Post } from './model'
 
 describe('Blog API', () => {
-  let worker: UnstableDevWorker
-
-  beforeAll(async () => {
-    worker = await unstable_dev('src/api.ts', {
-      experimental: { disableExperimentalWarning: true },
-      kv: [
-        {
-          binding: 'BLOG_EXAMPLE',
-          id: 'blog-example'
-        }
-      ]
-    })
-  })
-
-  afterAll(async () => {
-    await worker.stop()
-  })
-
   test('GET /posts', async () => {
-    const res = await worker.fetch('/posts')
+    const res = await worker.request('/posts', {}, env)
     expect(res.status).toBe(200)
     const body = (await res.json()) as { posts: Post[] }
     expect(body['posts']).not.toBeUndefined()
@@ -33,11 +16,15 @@ describe('Blog API', () => {
 
   test('POST /posts', async () => {
     const payload = JSON.stringify({ title: 'Morning', body: 'Good Morning' })
-    const res = await worker.fetch('/posts', {
-      method: 'POST',
-      body: payload,
-      headers: { 'Content-Type': 'application/json' }
-    })
+    const res = await worker.request(
+      '/posts',
+      {
+        method: 'POST',
+        body: payload,
+        headers: { 'Content-Type': 'application/json' }
+      },
+      env
+    )
     expect(res.status).toBe(201)
     const body = (await res.json()) as { post: Post }
     const newPost = body['post']
@@ -47,7 +34,7 @@ describe('Blog API', () => {
   })
 
   test('GET /posts', async () => {
-    const res = await worker.fetch('/posts')
+    const res = await worker.request('/posts', {}, env)
     expect(res.status).toBe(200)
     const body = (await res.json()) as { posts: Post[] }
     expect(body['posts']).not.toBeUndefined()
@@ -55,7 +42,7 @@ describe('Blog API', () => {
   })
 
   test('POST /posts/:id', async () => {
-    const res = await worker.fetch(`/posts/${newPostId}`)
+    const res = await worker.request(`/posts/${newPostId}`, {}, env)
     expect(res.status).toBe(200)
     const body = (await res.json()) as { post: Post }
     const post = body['post'] as Post
@@ -65,18 +52,22 @@ describe('Blog API', () => {
 
   test('PUT /posts/:id', async () => {
     const payload = JSON.stringify({ title: 'Night', body: 'Good Night' })
-    const res = await worker.fetch(`/posts/${newPostId}`, {
-      method: 'PUT',
-      body: payload,
-      headers: { 'Content-Type': 'application/json' }
-    })
+    const res = await worker.request(
+      `/posts/${newPostId}`,
+      {
+        method: 'PUT',
+        body: payload,
+        headers: { 'Content-Type': 'application/json' }
+      },
+      env
+    )
     expect(res.status).toBe(200)
     const body = (await res.json()) as { ok: Boolean }
     expect(body['ok']).toBeTruthy()
   })
 
   test('GET /posts/:id', async () => {
-    const res = await worker.fetch(`/posts/${newPostId}`)
+    const res = await worker.request(`/posts/${newPostId}`, {}, env)
     expect(res.status).toBe(200)
     const body = (await res.json()) as { post: Post }
     const post = body['post']
@@ -85,16 +76,20 @@ describe('Blog API', () => {
   })
 
   test('DELETE /posts/:id', async () => {
-    const res = await worker.fetch(`/posts/${newPostId}`, {
-      method: 'DELETE'
-    })
+    const res = await worker.request(
+      `/posts/${newPostId}`,
+      {
+        method: 'DELETE'
+      },
+      env
+    )
     expect(res.status).toBe(200)
     const body = (await res.json()) as { ok: Boolean }
     expect(body['ok']).toBeTruthy()
   })
 
   test('GET /posts/:id', async () => {
-    const res = await worker.fetch(`/posts/${newPostId}`)
+    const res = await worker.request(`/posts/${newPostId}`, {}, env)
     expect(res.status).toBe(404)
   })
 })
