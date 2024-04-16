@@ -1,13 +1,6 @@
 /** @jsx jsx */
-import { serve } from 'https://deno.land/std@0.146.0/http/server.ts'
-import { Hono } from 'https://deno.land/x/hono@v2.0.2/mod.ts'
-import {
-  logger,
-  poweredBy,
-  serveStatic,
-  jsx,
-  html,
-} from 'https://deno.land/x/hono@v2.0.2/middleware.ts'
+import { html, jsx, logger, poweredBy, serveStatic } from 'https://deno.land/x/hono@v3.11.7/middleware.ts'
+import { Hono } from 'https://deno.land/x/hono@v3.11.7/mod.ts'
 
 const app = new Hono()
 
@@ -31,10 +24,10 @@ const Layout = (props: Props) => html`<!DOCTYPE html>
 
 app.get('/', (c) => {
   return c.html(
-    <Layout title='Hello Deno!'>
+    <Layout title="Hello Deno!">
       <h1>Hono JSX example</h1>
     </Layout>
   )
 })
 
-serve(app.fetch)
+Deno.serve(app.fetch)

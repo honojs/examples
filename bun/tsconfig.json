@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "types": [
+      "bun-types"
+    ],
     "jsx": "react-jsx",
-    "jsxFragmentFactory": "Fragment",
     "jsxImportSource": "hono/jsx"
   }
 }

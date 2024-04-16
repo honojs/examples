@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
-import { Page } from './pages/Page'
-import { Top } from './pages/Top'
+import { Page } from './pages/page'
+import { Top } from './pages/top'
 
 const app = new Hono()
 
@@ -16,7 +16,7 @@ const posts: Post[] = [
   { id: '2', title: 'Good Afternoon', body: 'Let us eat Lunch' },
   { id: '3', title: 'Good Evening', body: 'Let us eat Dinner' },
   { id: '4', title: 'Good Night', body: 'Let us drink Beer' },
-  { id: '5', title: 'こんにちは', body: '昼からビールを飲みます' },
+  { id: '5', title: 'こんにちは', body: '昼からビールを飲みます' }
 ]
 
 // Logic
@@ -39,4 +39,4 @@ app.get('/post/:id{[0-9]+}', (c) => {
   return c.html(<Page post={post} />)
 })
 
-app.fire()
+export default app

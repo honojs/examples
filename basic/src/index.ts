@@ -13,7 +13,7 @@ app.use(
   '/auth/*',
   basicAuth({
     username: 'hono',
-    password: 'acoolproject',
+    password: 'acoolproject'
   })
 )
 app.use('/etag/*', etag())
@@ -88,9 +88,9 @@ app.get('/user-agent', (c) => {
 app.get('/api/posts', prettyJSON(), (c) => {
   const posts = [
     { id: 1, title: 'Good Morning' },
-    { id: 2, title: 'Good Aternoon' },
+    { id: 2, title: 'Good Afternoon' },
     { id: 3, title: 'Good Evening' },
-    { id: 4, title: 'Good Night' },
+    { id: 4, title: 'Good Night' }
   ]
   return c.json(posts)
 })

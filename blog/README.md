@@ -8,7 +8,7 @@ CRUD web API for Blog.
 - KV
 - TypeScript
 - `wrangler` for develop and deploy
-- Test with Jest `miniflare environment`
+- Test with Vitest
 
 ## Endpoints
 

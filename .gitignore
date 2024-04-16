@@ -1,6 +1,7 @@
 dist
 node_modules
 worker
+.wrangler
 package-lock.json
 yarn.lock
 bun.lockb
