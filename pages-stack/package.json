@@ -16,7 +16,7 @@
     "wrangler": "^3.50.0"
   },
   "dependencies": {
-    "@hono/zod-validator": "^0.1.11",
+    "@hono/zod-validator": "^0.2.1",
     "hono": "^4.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
