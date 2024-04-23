@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { html, jsx, logger, poweredBy, serveStatic } from 'https://deno.land/x/hono@v4.2.4/middleware.ts'
+import { html }  from 'https://deno.land/x/hono@v4.2.4/helper.ts'
+import { jsx, logger, poweredBy, serveStatic } from 'https://deno.land/x/hono@v4.2.4/middleware.ts'
 import { Hono } from 'https://deno.land/x/hono@v4.2.4/mod.ts'
 
 const app = new Hono()
@@ -9,6 +10,7 @@ app.all('/favicon.ico', serveStatic({ path: './public/favicon.ico' }))
 
 type Props = {
   title: string
+  // deno-lint-ignore no-explicit-any
   children?: any
 }
 
