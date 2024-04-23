@@ -10,6 +10,7 @@ app.all('/favicon.ico', serveStatic({ path: './public/favicon.ico' }))
 
 type Props = {
   title: string
+  // deno-lint-ignore no-explicit-any
   children?: any
 }
 
