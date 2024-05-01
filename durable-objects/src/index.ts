@@ -1,23 +1,51 @@
 import { Hono } from 'hono'
-export { Counter } from './counter'
+import { createMiddleware } from 'hono/factory'
+import { Counter } from './counter'
 
-type Bindings = {
-  COUNTER: DurableObjectNamespace
+type Env = {
+  Bindings: {
+    COUNTERS: DurableObjectNamespace<Counter>
+  }
+  Variables: {
+    count: number
+    stub: DurableObjectStub<Counter>
+  }
 }
 
-const app = new Hono<{ Bindings: Bindings }>()
+const app = new Hono<Env>()
 
-app.get('*', async (c) => {
-  const id = c.env.COUNTER.idFromName('A')
-  const obj = c.env.COUNTER.get(id)
-  const resp = await obj.fetch(c.req.url)
-
-  if (resp.status === 404) {
-    return c.text('404 Not Found', 404)
+const durableObjectMiddleware = createMiddleware<Env>(async (c, next) => {
+  const name = c.req.query('name')
+  if (!name) {
+    return c.text(
+      'Select a Durable Object to contact by using the `name` URL query string parameter, for example, ?name=A'
+    )
   }
-
-  const count = parseInt(await resp.text())
-  return c.text(`Count is ${count}`)
+  const id = c.env.COUNTERS.idFromName(name)
+  const stub = c.env.COUNTERS.get(id)
+  c.set('stub', stub)
+  await next()
+  c.res = c.text(`Durable Object '${name}' count: ${c.var.count}`)
 })
+
+app.get('/', durableObjectMiddleware, async (c, next) => {
+  const count = await c.var.stub.getCounterValue()
+  c.set('count', count)
+  await next()
+})
+
+app.get('/increment', durableObjectMiddleware, async (c, next) => {
+  const count = await c.var.stub.increment()
+  c.set('count', count)
+  await next()
+})
+
+app.get('/decrement', durableObjectMiddleware, async (c, next) => {
+  const count = await c.var.stub.decrement()
+  c.set('count', count)
+  await next()
+})
+
+export { Counter }
 
 export default app
