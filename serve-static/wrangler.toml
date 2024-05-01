@@ -1,7 +1,0 @@
-name = "hono-example-serve-static"
-compatibility_date = "2024-04-01"
-
-main = "src/index.ts"
-
-[site]
-bucket = "./assets"
