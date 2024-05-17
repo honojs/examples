@@ -7,6 +7,7 @@ This repository contains examples that use [Hono](https://hono.dev).
 * [basic](./basic/) - basic usage of routing, middleware, and `Context`
 * [blog](./blog/) - CRUD example
 * [durable-objects](./durable-objects/) - simple example with Cloudflare Durable Objects
+* [env-vars](./env-vars/) - example on using environment variables with Hono in Typescript
 * [jsx-ssr](./jsx-ssr/) - JSX Server Side Rendering with `JSX` Middleware
 * [serve-static](./serve-static/) - example of `Serve Static` Middleware
 * [deno](./deno/) - examples for Deno
