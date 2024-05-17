@@ -10,10 +10,10 @@
   "license": "MIT",
   "packageManager": "yarn@3.2.1",
   "dependencies": {
-    "stripe": "^15.4.0"
+    "stripe": "^15.7.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240423.0",
-    "wrangler": "^3.52.0"
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "wrangler": "^3.57.0"
   }
 }
