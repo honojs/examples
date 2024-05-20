@@ -7,9 +7,11 @@ This repository contains examples that use [Hono](https://hono.dev).
 - [basic](./basic/) - basic usage of routing, middleware, and `Context`
 - [blog](./blog/) - CRUD example
 - [durable-objects](./durable-objects/) - simple example with Cloudflare Durable Objects
+- [env-vars](./env-vars/) - example using environment variables with Hono in Typescript: `Bindings` & `Variables`
 - [jsx-ssr](./jsx-ssr/) - JSX Server Side Rendering with `JSX` Middleware
-- [deno](./deno/) - examples for Deno
-- [bun](./bun/) - examples for Bun
+- [serve-static](./serve-static/) - example of `Serve Static` Middleware
+- [deno](./deno/) - Deno example
+- [bun](./bun/) - Bun example
 - [pages-stack](./pages-stack/) - Zod + Zod Validator + `hc` + React on Cloudflare Pages
 
 ## How to run

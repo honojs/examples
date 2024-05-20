@@ -1,0 +1,19 @@
+{
+  "name": "api-client",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts"
+  },
+  "license": "MIT",
+  "packageManager": "yarn@3.2.1",
+  "dependencies": {
+    "stripe": "^15.7.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "wrangler": "^3.57.0"
+  }
+}
