@@ -5,6 +5,7 @@ worker
 package-lock.json
 yarn.lock
 bun.lockb
+deno.lock
 
 # Output of 'npm pack'
 *.tgz

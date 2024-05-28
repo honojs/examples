@@ -1,5 +1,6 @@
-import { logger, poweredBy } from 'https://deno.land/x/hono@v4.2.4/middleware.ts'
-import { Hono } from 'https://deno.land/x/hono@v4.2.4/mod.ts'
+import { Hono } from 'hono'
+import { logger } from 'hono/logger'
+import { poweredBy } from 'hono/powered-by'
 
 const app = new Hono()
 
