@@ -13,6 +13,7 @@ This repository contains examples that use [Hono](https://hono.dev).
 - [deno](./deno/) - Deno example
 - [bun](./bun/) - Bun example
 - [pages-stack](./pages-stack/) - Zod + Zod Validator + `hc` + React on Cloudflare Pages
+- [pylon](./pylon/) - Code-First GraphQL with TypeScript - Automatic Schema from Your Functions
 
 ## How to run
 
@@ -55,6 +56,24 @@ Run:
 ```
 bun run hello.ts
 ```
+
+### Pylon
+
+Make sure you have [Bun](https://bun.sh) installed.
+
+Install:
+
+```
+bun install
+```
+
+Run:
+
+```
+bun run develop
+```
+
+For more information, see the [Pylon documentation](https://pylon.cronit.io/).
 
 ## Author
 
