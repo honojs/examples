@@ -9,6 +9,7 @@ This repository contains examples that use [Hono](https://hono.dev).
 - [durable-objects](./durable-objects/) - simple example with Cloudflare Durable Objects
 - [env-vars](./env-vars/) - example using environment variables with Hono in Typescript: `Bindings` & `Variables`
 - [jsx-ssr](./jsx-ssr/) - JSX Server Side Rendering with `JSX` Middleware
+- [hono-vite-jsx](./hono-vite-jsx/) - Example of using `hono/jsx/dom` with `vite`
 - [serve-static](./serve-static/) - example of `Serve Static` Middleware
 - [deno](./deno/) - Deno example
 - [bun](./bun/) - Bun example
