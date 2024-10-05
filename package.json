@@ -11,7 +11,7 @@
     "serve-static",
     "bun",
     "pages-stack",
-    "nextjs-stack",
+    "nextjs-page-stack",
     "hono-vite-jsx"
   ],
   "license": "MIT",
