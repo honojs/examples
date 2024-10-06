@@ -12,6 +12,7 @@
     "bun",
     "pages-stack",
     "nextjs-page-stack",
+    "nextjs-app-stack",
     "hono-vite-jsx"
   ],
   "license": "MIT",
