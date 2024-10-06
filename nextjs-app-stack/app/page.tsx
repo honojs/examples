@@ -25,6 +25,7 @@ export default function Home() {
     <>
       <input ref={nameRef} type="text" placeholder="Name" />
       <button
+        disabled={mutation.isPending}
         onClick={() => {
           mutation.mutate({
             name: nameRef.current?.value || "",
