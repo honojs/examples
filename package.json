@@ -7,8 +7,6 @@
     "blog",
     "durable-objects",
     "jsx-ssr",
-    "mustache-template",
-    "serve-static",
     "bun",
     "pages-stack",
     "nextjs-stack",
