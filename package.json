@@ -9,7 +9,8 @@
     "jsx-ssr",
     "bun",
     "pages-stack",
-    "nextjs-stack",
+    "nextjs-page-stack",
+    "nextjs-app-stack",
     "hono-vite-jsx"
   ],
   "license": "MIT",
