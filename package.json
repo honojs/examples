@@ -13,5 +13,10 @@
     "hono-vite-jsx"
   ],
   "license": "MIT",
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "dependencies": {
+    "@types/node": "^20.11.19",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4"
+  }
 }
