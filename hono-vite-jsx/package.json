@@ -1,18 +1,18 @@
 {
   "name": "hono-vite-jsx",
+  "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "ui:dev": "vite",
-    "ui:build": "vite build",
-    "ui:preview": "vite preview"
+    "dev": "vite",
+    "build": "vite build --mode client && vite build"
   },
   "dependencies": {
     "@hono/node-server": "^1.12.2",
     "hono": "^4.5.10"
   },
   "devDependencies": {
+    "@hono/vite-build": "^1.1.0",
+    "@hono/vite-dev-server": "^0.17.0",
     "@types/node": "^20.11.17",
-    "tsx": "^4.7.1",
     "vite": "^5.4.2"
   }
 }

@@ -2,32 +2,20 @@
 
 Author: [@MathurAditya724](https://github.com/MathurAditya724)
 
-This example shows how to use Hono's [Client Components](https://hono.dev/docs/guides/jsx-dom) with Vite and integrate it with the Hono API.
+This example shows how to use Hono's [jsx-dom](https://hono.dev/docs/guides/jsx-dom) with Vite and integrate it with the Hono API.
 
-## UI Commands
+## Commands
 
-Run the Vite development server
-
-```bash
-pnpm run ui:dev
-```
-
-Build the UI
-
-```bash
-pnpm run ui:build
-```
-
-Preview the built UI
-
-```bash
-pnpm run ui:preview
-```
-
-## API Commands
-
-Before running the API server to serve the UI, make sure to build the UI first. Then run the following command to start the API server.
+Run the `vite` dev server
 
 ```bash
 pnpm run dev
 ```
+
+Building
+
+```bash
+pnpm run build
+```
+
+This project is configured to use `node` runtime, you can change it to your desired runtime in the `vite.config.js` file. We are using [@hono/vite-build](https://www.npmjs.com/package/@hono/vite-build) package for building the project and [@hono/vite-dev-server](https://www.npmjs.com/package/@hono/vite-dev-server) for running the dev server.
