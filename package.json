@@ -7,11 +7,11 @@
     "blog",
     "durable-objects",
     "jsx-ssr",
-    "bun",
     "pages-stack",
     "nextjs-stack",
-    "hono-vite-jsx"
+    "hono-vite-jsx",
+    "env-vars"
   ],
   "license": "MIT",
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "npm@10.0.0"
 }

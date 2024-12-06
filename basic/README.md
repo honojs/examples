@@ -5,7 +5,7 @@ Before you can start publishing your service to cloudflare worker, you must sign
 You can update the information (`name`, `zoon_id`, etc) in wrangler file, then you can test and deploy your service by simply doing,
 
 ```txt
-yarn install
-yarn dev 		# Start a local server for developing your worker
-yarn deploy # Publish your worker to the orange cloud
+npm install
+npm run dev # Start a local server for developing your worker
+npm run deploy # Publish your worker to the orange cloud
 ```

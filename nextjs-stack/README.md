@@ -9,9 +9,9 @@
 
 ## Usage
 
-```
-yarn
-yarn dev
+```bash
+npm install
+npm run dev
 ```
 
 ## Author

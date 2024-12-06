@@ -15,45 +15,45 @@ This repository contains examples that use [Hono](https://hono.dev).
 - [bun](./bun/) - Bun example
 - [pages-stack](./pages-stack/) - Zod + Zod Validator + `hc` + React on Cloudflare Pages
 
-## How to run
+## Running Examples
 
-### Cloudflare Workers
+Install dependencies
 
-Install:
-
-```
-yarn install
+```bash
+npm install
 ```
 
-Run:
+For running the examples, run the below command and replace `[workspace]` with the example name.
 
-```
-yarn dev
+```bash
+npm -w [workspace] run dev
 ```
 
-### Deno
+Or if you have cloned a specific example, you can follow the instructions in the example's README.
 
-```
+### For deno examples
+
+```bash
 deno run --allow-net hello.ts
 ```
 
 or allow to read files on local disk:
 
-```
+```bash
 deno run --allow-net --allow-read jsx.tsx
 ```
 
-### Bun
+### For bun examples
 
-Install:
+Install dependencies
 
-```
+```bash
 bun install
 ```
 
-Run:
+Run the example
 
-```
+```bash
 bun run hello.ts
 ```
 
