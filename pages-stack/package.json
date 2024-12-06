@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "wrangler pages dev --compatibility-date=2023-02-05 -- npm vite",
     "build": "vite build",
-    "deploy": "npm build && wrangler pages deploy pages"
+    "deploy": "npm run build && wrangler pages deploy pages"
   },
   "license": "MIT",
   "devDependencies": {

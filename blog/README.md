@@ -69,5 +69,5 @@ npm run dev
 Publish:
 
 ```sh
-npm deploy
+npm run deploy
 ```
