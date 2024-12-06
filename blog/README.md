@@ -23,7 +23,7 @@ CRUD web API for Blog.
 Install dependencies:
 
 ```sh
-yarn install
+npm install
 ```
 
 Rename `wrangler.example.toml` to `wrangler.toml`:
@@ -63,11 +63,11 @@ kv_namespaces = [
 Run a development server:
 
 ```sh
-yarn dev
+npm dev
 ```
 
 Publish:
 
 ```sh
-yarn deploy
+npm deploy
 ```
