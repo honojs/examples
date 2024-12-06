@@ -6,6 +6,6 @@ You can update the information (`name`, `zoon_id`, etc) in wrangler file, then y
 
 ```txt
 npm install
-npm dev # Start a local server for developing your worker
+npm run dev # Start a local server for developing your worker
 npm deploy # Publish your worker to the orange cloud
 ```

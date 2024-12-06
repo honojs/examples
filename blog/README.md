@@ -63,7 +63,7 @@ kv_namespaces = [
 Run a development server:
 
 ```sh
-npm dev
+npm run dev
 ```
 
 Publish:
