@@ -4,6 +4,38 @@ Based on the Hono/JSX + Vite example by [@MathurAditya724](https://github.com/Ma
 
 This example shows how to use Supabase Auth both on the client and server side with Hono.
 
+## Supabase setup
+
+- Create a new Supabase project at [database.new](https://database.new/)
+- Go to the `SQL Editor` and run the following query to create the `countries` table.
+
+```sql
+-- Create the table
+create table countries (
+  id bigint primary key generated always as identity,
+  name text not null
+);
+-- Insert some sample data into the table
+insert into countries (name)
+values
+  ('Canada'),
+  ('United States'),
+  ('Mexico');
+
+alter table countries enable row level security;
+```
+
+- In a new query, create the following access policy.
+
+```sql
+create policy "public can read countries"
+on public.countries
+for select to authenticated
+using (true);
+```
+
+- [Enable anonymous sign-ins](https://supabase.com/dashboard/project/_/settings/auth) in the Auth settings.
+
 ## Setup
 
 - Run `npm install` to install the dependencies.
