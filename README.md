@@ -14,6 +14,7 @@ This repository contains examples that use [Hono](https://hono.dev).
 - [deno](./deno/) - Deno example
 - [bun](./bun/) - Bun example
 - [pages-stack](./pages-stack/) - Zod + Zod Validator + `hc` + React on Cloudflare Pages
+- [Supabase](./supabase-auth/) - Example of using Supabase Auth and database on both server and client side (built on [hono-vite-jsx](./hono-vite-jsx/)).
 
 ## Running Examples
 
