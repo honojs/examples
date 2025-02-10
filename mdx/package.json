@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "hono": "4.2.4",
-    "mdx-bundler": "10.0.3",
+    "mdx-bundler": "10.1.0",
     "esbuild": "0.24.0"
   }
 }

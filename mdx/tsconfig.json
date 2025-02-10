@@ -5,6 +5,7 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    "jsxImportSource": "hono/jsx",
+    "typeRoots": ["./node_modules/@types"],
   }
 }
