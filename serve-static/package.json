@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy src/index.ts",
-    "test": "vitest --run"
+    "deploy": "wrangler deploy src/index.ts"
   },
   "license": "MIT",
   "dependencies": {
