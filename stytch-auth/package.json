@@ -12,7 +12,6 @@
     "@hono/stytch-auth": "^0.1.0",
     "@stytch/react": "^19.5.3",
     "@stytch/vanilla-js": "^5.24.4",
-    "@vitejs/plugin-react": "^4.5.2",
     "hono": "^4.5.10",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -24,6 +23,7 @@
     "@hono/vite-build": "^1.1.0",
     "@hono/vite-dev-server": "^0.17.0",
     "@types/node": "^20.11.17",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "@vitejs/plugin-react": "^4.5.2"
   }
 }
