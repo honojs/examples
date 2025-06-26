@@ -10,7 +10,8 @@
     "pages-stack",
     "nextjs-stack",
     "hono-vite-jsx",
-    "env-vars"
+    "env-vars",
+    "stytch-auth"
   ],
   "license": "MIT",
   "packageManager": "npm@10.0.0"

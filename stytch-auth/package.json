@@ -1,0 +1,27 @@
+{
+  "name": "stytch-auth",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.12.2",
+    "@hono/stytch-auth": "^0.1.0",
+    "@stytch/react": "^19.5.3",
+    "@stytch/vanilla-js": "^5.24.4",
+    "hono": "^4.8.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2",
+    "stytch": "^12.21.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.6.0",
+    "@types/node": "^20.11.17",
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5"
+  }
+}
