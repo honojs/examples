@@ -12,7 +12,7 @@
     "@hono/stytch-auth": "^0.1.0",
     "@stytch/react": "^19.5.3",
     "@stytch/vanilla-js": "^5.24.4",
-    "hono": "^4.5.10",
+    "hono": "^4.8.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
