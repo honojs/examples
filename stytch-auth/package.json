@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode client && vite build",
+    "build": "vite build",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },
@@ -20,10 +20,8 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.6.0",
-    "@hono/vite-build": "^1.1.0",
-    "@hono/vite-dev-server": "^0.17.0",
     "@types/node": "^20.11.17",
-    "vite": "^6.3.5",
-    "@vitejs/plugin-react": "^4.5.2"
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5"
   }
 }
