@@ -1,0 +1,12 @@
+{
+  "name": "mdx",
+  "license": "MIT",
+  "scripts": {
+    "dev": "bun run --hot src/index.tsx"
+  },
+  "dependencies": {
+    "hono": "4.2.4",
+    "mdx-bundler": "10.1.0",
+    "esbuild": "0.24.0"
+  }
+}
