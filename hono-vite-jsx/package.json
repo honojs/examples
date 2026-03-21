@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode client && vite build"
+    "build": "vite build --mode client && vite build",
+    "start": "node ./dist/index.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.12.2",

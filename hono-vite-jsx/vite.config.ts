@@ -24,6 +24,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       build({
         entry: "src/index.tsx",
+        staticRoot: "./dist"
       }),
       devServer({
         entry: "src/index.tsx",
